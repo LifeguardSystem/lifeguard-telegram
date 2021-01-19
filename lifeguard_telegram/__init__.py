@@ -6,18 +6,13 @@ import os
 
 from lifeguard.logger import lifeguard_logger as logger
 
-from lifeguard_telegram.bot import load_bot_handlers, updater
+from lifeguard_telegram.bot import load_bot_handlers, init_updater
 
 
 class LifeguardTelegramPlugin:
     def __init__(self, lifeguard_context):
         self.lifeguard_context = lifeguard_context
-        self.start_bot()
-
-    def start_bot(self):
-        load_bot_handlers()
-        updater.start_polling()
-        updater.idle()
+        init_updater()
 
 
 def init(lifeguard_context):
