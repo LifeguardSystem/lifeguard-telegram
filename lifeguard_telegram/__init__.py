@@ -10,6 +10,10 @@ from lifeguard_telegram.bot import load_bot_handlers, init_updater
 
 
 class LifeguardTelegramPlugin:
+    """
+    Telegram Plugin
+    """
+
     def __init__(self, lifeguard_context):
         self.lifeguard_context = lifeguard_context
         init_updater()
