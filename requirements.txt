@@ -1,2 +1,2 @@
-lifeguard==0.0.27
+lifeguard==1.1.0
 python-telegram-bot==13.1
