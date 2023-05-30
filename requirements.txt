@@ -1,2 +1,4 @@
 lifeguard==1.1.0
 python-telegram-bot==13.1
+telepot==12.7
+
