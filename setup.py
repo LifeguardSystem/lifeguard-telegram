@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="lifeguard-telegram",
-    version="1.0.1",
+    version="1.1.0",
     url="https://github.com/LifeguardSystem/lifeguard-telegram",
     author="Diego Rubin",
     author_email="contact@diegorubin.dev",
