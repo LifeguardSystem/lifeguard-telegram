@@ -1,12 +1,13 @@
 """
 Lifeguard integration with Telegram
 """
-import _thread
 import os
 
+from lifeguard.notifications import append_notification_implementation
 from lifeguard.logger import lifeguard_logger as logger
 
-from lifeguard_telegram.bot import load_bot_handlers, init_updater
+from lifeguard_telegram.bot import init_updater
+from lifeguard_telegram.notifications import TelegramNotificationBase
 
 
 class LifeguardTelegramPlugin:
@@ -20,6 +21,7 @@ class LifeguardTelegramPlugin:
 
 
 def init(lifeguard_context):
+    append_notification_implementation(TelegramNotificationBase)
     newpid = os.fork()
     if newpid == 0:
         logger.info("starting telegram process")

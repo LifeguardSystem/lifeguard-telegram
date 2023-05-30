@@ -6,7 +6,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="lifeguard-telegram",
-    version="1.0.0",
+    version="1.0.1",
     url="https://github.com/LifeguardSystem/lifeguard-telegram",
     author="Diego Rubin",
     author_email="contact@diegorubin.dev",
@@ -16,7 +16,7 @@ setup(
     description="Lifeguard integration with Telegram",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=["lifeguard", "python-telegram-bot"],
+    install_requires=["lifeguard", "python-telegram-bot", "telepot"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Plugins",

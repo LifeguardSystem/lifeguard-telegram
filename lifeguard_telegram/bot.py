@@ -6,7 +6,7 @@ from lifeguard.logger import lifeguard_logger as logger
 from lifeguard.settings import LIFEGUARD_DIRECTORY
 from telegram.ext import CommandHandler, Updater
 
-from lifeguard_telegram.settings import LIFEGUARD_TELEGRAM_BOT_TOKEN
+from lifeguard_telegram.settings import TELEGRAM_API_KEY
 
 CONTEXT = {"updater": None}
 
@@ -15,7 +15,7 @@ def init_updater():
     """
     Init start polling
     """
-    CONTEXT["updater"] = Updater(LIFEGUARD_TELEGRAM_BOT_TOKEN, use_context=True)
+    CONTEXT["updater"] = Updater(TELEGRAM_API_KEY, use_context=True)
 
     load_bot_handlers()
 
