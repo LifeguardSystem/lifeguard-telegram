@@ -8,6 +8,7 @@ from lifeguard.logger import lifeguard_logger as logger
 
 from lifeguard_telegram.bot import init_updater
 from lifeguard_telegram.notifications import TelegramNotificationBase
+from lifeguard_telegram.settings import LIFEGUARD_TELEGRAM_ENABLE_BOTS_LOADER
 
 
 class LifeguardTelegramPlugin:
@@ -17,7 +18,9 @@ class LifeguardTelegramPlugin:
 
     def __init__(self, lifeguard_context):
         self.lifeguard_context = lifeguard_context
-        init_updater()
+
+        if LIFEGUARD_TELEGRAM_ENABLE_BOTS_LOADER:
+            init_updater()
 
 
 def init(lifeguard_context):
